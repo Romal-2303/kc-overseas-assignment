@@ -1,0 +1,67 @@
+@use "../../../designSystem/_library" as *;
+
+.highlightStepsContainer {
+  margin-top: 178px;
+  background-color: $purple-30;
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 0;
+
+  @media (max-width: 576px) {
+    margin-top: 93px;
+    padding: 0;
+    height: 596px;
+  }
+
+  .headingText {
+    padding: 0 20px;
+
+    @media (max-width: 576px) {
+      font-size: 26px;
+      text-align: center;
+      padding: 0 24px;
+      margin-top: 75px;
+    }
+  }
+
+  .carouselContainer {
+    margin-top: 120px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    @media (max-width: 576px) {
+      margin-top: 26px;
+    }
+
+    .overlayContainerRight {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 25%;
+      background: linear-gradient(
+        270deg,
+        #dbd9ff 46.66%,
+        rgba(219, 217, 255, 0) 96.77%
+      );
+      opacity: 0.9;
+    }
+
+    .overlayContainerLeft {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 25%;
+      background: linear-gradient(
+        90deg,
+        #dbd9ff 46.66%,
+        rgba(219, 217, 255, 0) 96.77%
+      );
+      opacity: 0.9;
+    }
+  }
+}

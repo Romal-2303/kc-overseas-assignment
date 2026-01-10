@@ -1,0 +1,19 @@
+const FooterArc = () => {
+  return (
+    <svg
+      width="1920"
+      height="346"
+      viewBox="0 0 1920 346"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="xMidYMin slice"
+    >
+      <path
+        d="M0 346H1920V100.924C1170.28 -35.0035 749.965 -32.272 0 100.924V346Z"
+        fill="#0E1B2C"
+      />
+    </svg>
+  );
+};
+
+export default FooterArc;

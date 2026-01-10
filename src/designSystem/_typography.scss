@@ -1,0 +1,95 @@
+// Typography Styles
+
+// Base font family
+body {
+  font-family: "BuenosAires", sans-serif;
+  font-weight: 400; // Regular
+  font-style: normal;
+}
+
+// Regular text
+.regular {
+  font-family: "BuenosAires", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+// Regular italic
+.regular-italic {
+  font-family: "BuenosAires", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+// SemiBold
+.semibold {
+  font-family: "BuenosAires", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+// SemiBold italic
+.semibold-italic {
+  font-family: "BuenosAires", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+// Bold
+.bold {
+  font-family: "BuenosAires", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+// Bold italic
+.bold-italic {
+  font-family: "BuenosAires", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.text-button-1 {
+  font-family: "BuenosAires", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.heading-1 {
+  font-family: "BuenosAires", sans-serif;
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 130%;
+}
+
+.heading-3 {
+  font-family: "BuenosAires", sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+}
+
+.heading-4 {
+  font-family: "BuenosAires", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 150%;
+}
+
+.heading-5 {
+  font-family: "BuenosAires", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.paragraph-14 {
+  font-family: "BuenosAires", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+}
+.paragraph-16 {
+  font-family: "BuenosAires", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+}

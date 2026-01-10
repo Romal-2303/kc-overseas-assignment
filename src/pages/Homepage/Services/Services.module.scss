@@ -1,0 +1,194 @@
+@use "../../../designSystem/_library" as *;
+
+.servicesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  padding: 0 20px;
+
+  @media (max-width: 576px) {
+    margin-top: 72px;
+  }
+
+  .headingText {
+    @media (max-width: 576px) {
+      font-size: 26px;
+    }
+  }
+
+  .servicesList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 41px;
+    column-gap: 30px;
+    row-gap: 20px;
+
+    @media (max-width: 576px) {
+      margin-top: 43px;
+      grid-template-columns: 1fr;
+      padding: 0 20px;
+    }
+
+    .serviceItem {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 0 30px;
+      height: 80px;
+      border-radius: 10px;
+      box-shadow: 0px 8px 25px 0px #0000001a;
+
+      @media (max-width: 576px) {
+        p {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 140%;
+        }
+      }
+    }
+  }
+
+  .enquireNowBtn {
+    color: white;
+    background: linear-gradient(263.28deg, #ff6a56 1.1%, #fdaf4d 141.83%);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 41px;
+
+    @media (max-width: 576px) {
+      margin-top: 39px;
+    }
+  }
+
+  .highlightSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 124px;
+    margin-top: 76px;
+    height: 440px;
+    width: 100%;
+
+    @media (max-width: 950px) {
+      flex-direction: column;
+      align-items: start;
+      margin-top: 108px;
+      gap: 29px;
+      height: auto;
+      // padding: 0 20px;
+      overflow: visible;
+    }
+
+    .OverlayImageContainer {
+      height: 100%;
+      width: 450px;
+      background-color: $yellow-30;
+      position: relative;
+      border-radius: 10px;
+
+      @media (max-width: 950px) {
+        width: 100%;
+        max-width: 304px;
+        height: 270px;
+      }
+
+      @media (max-width: 360px) {
+        max-width: 284px;
+      }
+
+      .imageContainer {
+        height: 100%;
+        position: absolute;
+        left: 40px;
+        top: 40px;
+        width: 450px;
+
+        @media (max-width: 950px) {
+          left: 27px;
+          top: 27px;
+          width: 304px;
+          height: 270px;
+        }
+
+        @media (max-width: 360px) {
+          padding-right: 20px;
+        }
+
+        .girlTalkingImage {
+          height: 100%;
+          width: 100%;
+          border-radius: 10px;
+          object-fit: cover;
+          object-position: left;
+        }
+      }
+    }
+
+    .contentContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 17px;
+      width: fit-content;
+
+      @media (max-width: 950px) {
+        // padding: 0 20px;
+        margin-top: 29px;
+      }
+
+      .headingText {
+        width: fit-content;
+
+        @media (max-width: 950px) {
+          font-size: 26px;
+          text-align: center;
+        }
+      }
+      .descriptionText {
+        max-width: 50ch;
+
+        @media (max-width: 950px) {
+          margin-top: 56px;
+        }
+      }
+
+      .featuresContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        padding: 9px 0;
+
+        @media (max-width: 950px) {
+          margin-top: 30px;
+        }
+
+        .featureItem {
+          display: flex;
+          align-items: center;
+          gap: 19px;
+
+          .starFilledIcon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            box-shadow: 0px 10px 15px 0px #0000001a;
+            flex-shrink: 0;
+          }
+          p {
+            font-weight: 400;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

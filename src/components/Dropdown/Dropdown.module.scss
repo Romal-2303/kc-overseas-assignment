@@ -1,0 +1,28 @@
+@use "../../designSystem/colors/_primary" as *;
+
+.dropdownContainer {
+  border-radius: 8px;
+  padding: 16px;
+  background-color: white;
+  box-shadow: 0px 8px 25px 0px #0000001a;
+  z-index: 1001;
+  color: $black-100;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 12px;
+
+  &.top {
+    bottom: calc(100% + 10px);
+  }
+
+  &.bottom {
+    top: calc(100% + 10px);
+  }
+}

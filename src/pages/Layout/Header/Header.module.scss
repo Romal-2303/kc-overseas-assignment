@@ -1,0 +1,71 @@
+@use "../../../designSystem/_library" as *;
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.3125rem 6.25rem;
+  height: 120px;
+
+  @media (max-width: 1050px) {
+    padding: 1.25rem 1.25rem;
+    height: 70px;
+    padding-left: 20px;
+    padding-top: 39px;
+  }
+
+  .hamburgerMenuContainer {
+    position: relative;
+
+    .menuOverlay {
+      position: absolute;
+      top: calc(100% + 10px);
+      right: 0;
+      background-color: white;
+      border-radius: 10px;
+      width: 80vw;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 20px;
+
+      z-index: 100;
+
+      .course-finder-btn {
+        padding: 14px 25px;
+        border-radius: 8px;
+        background: none;
+        border: 1px solid black;
+        cursor: pointer;
+        color: black;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .menuContainer {
+    display: flex;
+    align-items: center;
+    gap: 33px;
+
+    p {
+      color: white;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .course-finder-btn {
+      padding: 14px 25px;
+      border-radius: 8px;
+      background: none;
+      border: 1px solid white;
+      cursor: pointer;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+  }
+}

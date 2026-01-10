@@ -1,0 +1,235 @@
+@use "../../designSystem/_library" as *;
+
+.carouselContainer {
+  .carouselContentContainer {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    gap: 40px;
+
+    .carouselItem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      transition: transform 0.3s ease-in-out;
+
+      .numberContainer {
+        height: 70px;
+        width: 70px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        box-sizing: border-box;
+
+        p {
+          margin: 0;
+          padding: 0;
+          line-height: 1;
+        }
+      }
+
+      .numberContainerSmall {
+        height: 50px;
+        width: 50px;
+
+        p {
+          font-size: 20px;
+        }
+      }
+
+      .numberContainerActive {
+        background-color: white;
+      }
+
+      .numberContainerInActive {
+        border: 1px solid $gray-200;
+        color: $gray-300;
+      }
+
+      .contentContainer {
+        background-color: white;
+        box-shadow: 0px 6px 50px 0px #0000001a;
+        border-radius: 8px;
+        width: 440px;
+        height: 260px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        position: relative;
+        flex-shrink: 0;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: -18px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          height: 0;
+          border-left: 20px solid transparent;
+          border-right: 20px solid transparent;
+          border-bottom: 20px solid white;
+        }
+
+        .iconContainer {
+          margin-bottom: 28.5px;
+          width: 105px;
+          height: 60px;
+          border-radius: 105px 105px 0px 0px;
+          position: relative;
+
+          .icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -85%);
+          }
+        }
+
+        .iconContainerActive {
+          background-color: $orange-200;
+        }
+
+        .iconContainerInActive {
+          background-color: $gray-100;
+        }
+      }
+    }
+
+    // Small Variants
+    .carouselItemSmall {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      transition: transform 0.3s ease-in-out;
+
+      .numberContainer {
+        height: 50px;
+        width: 50px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        box-sizing: border-box;
+
+        p {
+          margin: 0;
+          padding: 0;
+          line-height: 1;
+        }
+      }
+
+      .numberContainerSmall {
+        height: 50px;
+        width: 50px;
+
+        p {
+          font-size: 20px;
+        }
+      }
+
+      .numberContainerActive {
+        background-color: white;
+      }
+
+      .numberContainerInActive {
+        border: 1px solid $gray-200;
+        color: $gray-300;
+      }
+
+      .contentContainer {
+        background-color: white;
+        box-shadow: 0px 6px 50px 0px #0000001a;
+        border-radius: 8px;
+        width: 274px;
+        height: 209px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        position: relative;
+        flex-shrink: 0;
+        padding: 0 37px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: -15px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          height: 0;
+          border-left: 15px solid transparent;
+          border-right: 15px solid transparent;
+          border-bottom: 15px solid white;
+        }
+
+        .iconContainer {
+          margin-top: 45px;
+          margin-bottom: 0;
+          width: 80px;
+          height: 47.5px;
+          border-radius: 105px 105px 0px 0px;
+          position: relative;
+
+          .icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -85%);
+          }
+        }
+
+        .iconContainerActive {
+          background-color: $orange-200;
+        }
+
+        .iconContainerInActive {
+          background-color: $gray-100;
+        }
+        .title {
+          margin-top: 14px;
+        }
+
+        .content {
+          text-align: center;
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .actionBtnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    height: 100%;
+    margin-top: 40px;
+
+    button {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    p {
+      font-weight: 600;
+      color: $orange-100;
+      font-size: 16px;
+    }
+  }
+}

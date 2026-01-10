@@ -1,0 +1,184 @@
+@use "../../../designSystem/_library" as *;
+
+.promotionContainer {
+  height: 530px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 101px;
+
+  align-items: center;
+  width: 100%;
+  color: white;
+  position: relative;
+
+  @media (max-width: 900px) {
+    padding-top: 35px;
+  }
+
+  .KunaiFilled {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+  }
+
+  .KunaiFilled2 {
+    position: absolute;
+    top: 18%;
+    right: 20%;
+  }
+
+  .starDisabled {
+    position: absolute;
+    right: 30%;
+    bottom: calc(50% - 120px);
+  }
+
+  .dot1 {
+    position: absolute;
+    left: 37%;
+    top: 12%;
+    background-color: white;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+  .dot2 {
+    position: absolute;
+    left: 30%;
+    top: 74%;
+    background-color: white;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+
+  .dot3-empty {
+    position: absolute;
+    right: 40%;
+    top: 10%;
+    border: 1px solid white;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+
+  .breadCrumbContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+
+    .breadCrumbSeparator {
+      width: 5px;
+      height: 5px;
+      background-color: $purple-200;
+      border-radius: 50%;
+    }
+
+    .breadcrumb-inactive {
+      color: $purple-200;
+    }
+
+    @media (max-width: 900px) {
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .mainHeading {
+    margin-top: 15px;
+    text-align: center;
+
+    .locationText {
+      position: relative;
+
+      .bottomDecorator {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 160px;
+        height: 23px;
+        background-color: $purple-300;
+        z-index: -1;
+      }
+    }
+
+    @media (max-width: 900px) {
+      margin-top: 33px;
+
+      p {
+        font-size: 26px;
+      }
+    }
+  }
+
+  .descriptionText {
+    margin-top: 34px;
+    text-align: center;
+    width: 50%;
+
+    @media (max-width: 900px) {
+      margin-top: 10px;
+      font-weight: 350;
+      font-size: 16px;
+      padding: 0 20px;
+      width: 100%;
+    }
+  }
+
+  .actionsMenuContainer {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 43px;
+      gap: 0;
+    }
+
+    .enquireNowBtn {
+      color: white;
+      background: linear-gradient(263.28deg, #ff6a56 1.1%, #fdaf4d 141.83%);
+      font-size: 16px;
+      font-weight: 600;
+      padding: 14px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+
+      @media (max-width: 900px) {
+        width: 232px;
+      }
+    }
+
+    .branchAddressDropdown {
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      @media (max-width: 900px) {
+        margin-top: 22px;
+      }
+
+      .chevronDownIconContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border-radius: 50%;
+        height: 48px;
+        width: 48px;
+      }
+      p {
+        font-weight: 400;
+        font-size: 16px;
+      }
+    }
+  }
+}

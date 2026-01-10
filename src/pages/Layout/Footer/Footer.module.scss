@@ -1,0 +1,126 @@
+@use "../../../designSystem/colors/_primary" as *;
+
+.footerContainer {
+  height: 357px;
+  margin-top: 143px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+
+  @media (max-width: 850px) {
+    height: 468px;
+  }
+
+  .footerArcContainer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    pointer-events: none;
+
+    svg {
+      width: 100%;
+      height: 346px;
+      display: block;
+      // Maintain aspect ratio: 1920/650 ≈ 2.95
+      // Using aspect-ratio to preserve the original proportions
+      aspect-ratio: 1920 / 346;
+      // min-height: 346px;
+    }
+
+    @media (max-width: 850px) {
+      svg {
+        height: 469px;
+        aspect-ratio: 375 / 469;
+      }
+    }
+  }
+
+  .footerLinesContainer {
+    position: absolute;
+    left: 10%;
+    bottom: 55%;
+
+    @media (max-width: 850px) {
+      left: 1%;
+      top: -7%;
+    }
+  }
+
+  .footerTitle {
+    padding-top: 120px;
+    color: white;
+
+    @media (max-width: 850px) {
+      font-size: 26px;
+      padding: 0 20px;
+      padding-top: 63px;
+    }
+  }
+
+  .footerFormContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+
+    @media (max-width: 850px) {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 24px;
+    }
+
+    .footerFormInput {
+      border-radius: 5px;
+      padding: 14px 20px;
+      width: 300px;
+      border: none;
+
+      &::placeholder {
+        color: $gray-400;
+        font-weight: 400;
+        font-size: 16px;
+      }
+    }
+
+    .footerFormInputContainer {
+      position: relative;
+      cursor: pointer;
+
+      input {
+        cursor: pointer;
+      }
+
+      .arrowDownContainer {
+        position: absolute;
+        bottom: 50%;
+        right: 15px;
+        transform: translateY(50%);
+      }
+    }
+
+    .footerFormButton {
+      background: linear-gradient(263.28deg, #ff6a56 1.1%, #fdaf4d 141.83%);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 0 25px;
+
+      @media (max-width: 850px) {
+        padding: 15px 0;
+        width: 300px;
+      }
+    }
+
+    .divider {
+      width: calc(100% - 40px);
+      height: 1px;
+      background-color: $black-300;
+      margin-top: 20px;
+    }
+  }
+}

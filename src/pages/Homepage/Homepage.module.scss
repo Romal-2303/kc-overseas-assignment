@@ -1,0 +1,24 @@
+@use "../../designSystem/_library" as *;
+
+.homepageContainer {
+  position: relative;
+
+  .purpleBgContainer {
+    position: absolute;
+    top: -120px;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    pointer-events: none;
+
+    svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      // Maintain aspect ratio: 1920/650 ≈ 2.95
+      // Using aspect-ratio to preserve the original proportions
+      aspect-ratio: 1920 / 650;
+      min-height: 650px;
+    }
+  }
+}

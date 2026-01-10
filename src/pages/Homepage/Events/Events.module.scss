@@ -1,0 +1,277 @@
+@use "../../../designSystem/_library" as *;
+
+.eventsContainer {
+  margin-top: 120px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 900px) {
+    margin-top: 90px;
+    align-items: start;
+  }
+
+  .headingText {
+    @media (max-width: 900px) {
+      font-size: 26px;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  .eventListContainer {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+    padding: 0 20px;
+
+    @media (max-width: 1200px) and (min-width: 577px) {
+      gap: 20px;
+    }
+
+    .highlightedEventContainer {
+      flex-shrink: 1;
+      min-width: 0;
+
+      @media (max-width: 1200px) and (min-width: 577px) {
+        flex: 1 1 48%;
+        max-width: 570px;
+      }
+
+      .eventCard {
+        height: 530px;
+        width: 570px;
+        border-radius: 10px;
+        box-shadow: 0px 6px 50px 0px #0000001a;
+
+        @media (max-width: 1200px) and (min-width: 577px) {
+          width: 100%;
+          max-width: 570px;
+        }
+
+        .imageContainer {
+          height: 300px;
+          width: 100%;
+          .eventImage {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+          }
+        }
+
+        .eventContentContainer {
+          padding: 0 30px;
+          text-align: left;
+
+          .dateContainer {
+            color: $blue-100;
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 15px;
+            line-height: 30px;
+          }
+
+          .titleContainer {
+            margin-top: 2px;
+          }
+
+          .descriptionContainer {
+            margin-top: 9px;
+            color: $gray-400;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 150%;
+          }
+          .registerNowBtn {
+            color: $orange-100;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+          }
+        }
+      }
+    }
+
+    .remainingEventsContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 29px;
+      flex-shrink: 1;
+      min-width: 0;
+
+      @media (max-width: 1200px) and (min-width: 577px) {
+        flex: 1 1 48%;
+        max-width: 570px;
+      }
+
+      .eventCard {
+        height: 250px;
+        width: 570px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0px 6px 50px 0px #0000001a;
+
+        @media (max-width: 1200px) and (min-width: 577px) {
+          width: 100%;
+        }
+
+        .imageContainer {
+          height: 100%;
+          width: 195px;
+
+          .eventImage {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: left;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+          }
+        }
+
+        .eventContentContainer {
+          text-align: left;
+          padding: 32px 10px 30px 30px;
+
+          .dateContainer {
+            color: $blue-100;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 30px;
+          }
+
+          .titleContainer {
+            margin-top: 3px;
+          }
+
+          .descriptionContainer {
+            color: $gray-400;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 150%;
+          }
+          .registerNowBtn {
+            color: $orange-100;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .eventListContainerMobile {
+    display: flex;
+    margin-top: 22px;
+    padding: 0 20px;
+    gap: 20px;
+    overflow: scroll;
+    width: 100vw;
+    padding-bottom: 40px;
+
+    // Hide scrollbar for mobile event list container
+    scrollbar-width: none; // Firefox
+    -ms-overflow-style: none; // IE and Edge
+    &::-webkit-scrollbar {
+      display: none; // Chrome, Safari, Opera
+    }
+
+    .highlightedEventContainer {
+      .eventCard {
+        height: 472px;
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 0px 6px 50px 0px #0000001a;
+
+        .imageContainer {
+          height: 200px;
+          width: 100%;
+          .eventImage {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+          }
+        }
+
+        .eventContentContainer {
+          padding: 0 30px;
+          text-align: left;
+
+          .dateContainer {
+            color: $blue-100;
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 15px;
+            line-height: 30px;
+          }
+
+          .titleContainer {
+            margin-top: 2px;
+          }
+
+          .descriptionContainer {
+            margin-top: 18px;
+            color: $gray-400;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 150%;
+          }
+          .registerNowBtn {
+            color: $orange-100;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .seeMoreBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 38px;
+
+    @media (max-width: 900px) {
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 16px;
+      color: $orange-100;
+      font-weight: 600;
+    }
+  }
+}

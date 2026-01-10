@@ -1,0 +1,288 @@
+@use "../../../designSystem/_library" as *;
+
+.latestUpdatesSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  text-align: center;
+
+  @media (max-width: 576px) {
+    margin-top: 74px;
+  }
+
+  .headingText {
+    @media (max-width: 576px) {
+      font-size: 26px;
+    }
+  }
+
+  .latestUpdatesContainer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    width: 100%;
+    padding: 0 20px;
+
+    .highlightedUpdateCard {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 500px;
+      width: 570px;
+      border-radius: 10px;
+      box-shadow: 0px 6px 50px 0px #0000001a;
+      background-color: $orange-400;
+      padding: 50px;
+      text-align: left;
+      position: relative;
+      overflow: hidden;
+
+      .contentContainer {
+        color: $black-200;
+
+        .descriptionText {
+          margin-top: 21px;
+        }
+      }
+
+      .applyNowBtn {
+        background-color: white;
+        border: none;
+        border-radius: 8px;
+        color: $orange-100;
+        font-weight: 600;
+        font-size: 16px;
+        width: fit-content;
+        padding: 14px 31px 15px 35px;
+        cursor: pointer;
+      }
+
+      .designOverlay {
+        position: absolute;
+        top: 214px;
+        left: 199px;
+      }
+    }
+
+    .latestUpdatesList {
+      display: flex;
+      gap: 30px;
+
+      .updateCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 500px;
+        background-color: white;
+        box-shadow: -5px 4px 50px 0px #0000001a;
+        border-radius: 10px;
+        padding: 0 15px;
+        width: 250px;
+
+        .iconContainer {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 54px;
+          height: 120px;
+        }
+
+        .orgName {
+          margin-top: 26px;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 140%;
+          height: 50px;
+        }
+        .kunaisContainer {
+          display: flex;
+          align-items: center;
+          gap: 9px;
+          margin-top: 17px;
+          margin-bottom: 40px;
+
+          svg {
+            width: 16px;
+            height: 16px;
+            path {
+              fill: $gray-600;
+            }
+          }
+
+          .bigKunai {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+
+        .info {
+          color: $blue-100;
+        }
+
+        .date {
+          margin-top: 10px;
+          font-size: 18px;
+          font-weight: 400;
+          color: $gray-400;
+        }
+      }
+    }
+  }
+
+  .latestUpdatesContainerMobile {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    width: 100%;
+    padding: 0 20px;
+    overflow: scroll;
+    margin-bottom: -40px;
+    padding-top: 32px;
+    padding-bottom: 40px;
+
+    // Hide scrollbar for mobile latest updates container
+    scrollbar-width: none; // Firefox
+    -ms-overflow-style: none; // IE and Edge
+    &::-webkit-scrollbar {
+      display: none; // Chrome, Safari, Opera
+    }
+
+    .highlightedUpdateCard {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 500px;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0px 6px 50px 0px #0000001a;
+      background-color: $orange-400;
+      padding: 50px 30px;
+      text-align: left;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+
+      .contentContainer {
+        color: $black-200;
+
+        .headingTextMobile {
+          font-size: 26px;
+        }
+
+        .descriptionText {
+          margin-top: 14px;
+        }
+      }
+
+      .applyNowBtn {
+        background-color: white;
+        border: none;
+        border-radius: 8px;
+        color: $orange-100;
+        font-weight: 600;
+        font-size: 16px;
+        width: 100%;
+        padding: 14px 31px 15px 35px;
+        cursor: pointer;
+      }
+
+      .designOverlay {
+        position: absolute;
+        top: 243px;
+        left: 51px;
+      }
+    }
+
+    .latestUpdatesList {
+      display: flex;
+      gap: 30px;
+
+      .updateCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 500px;
+        background-color: white;
+        box-shadow: -5px 4px 50px 0px #0000001a;
+        border-radius: 10px;
+        padding: 0 15px;
+        width: 300px;
+
+        .iconContainer {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 54px;
+          height: 120px;
+        }
+
+        .orgName {
+          margin-top: 26px;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 140%;
+          height: 50px;
+        }
+        .kunaisContainer {
+          display: flex;
+          align-items: center;
+          gap: 9px;
+          margin-top: 17px;
+          margin-bottom: 40px;
+
+          svg {
+            width: 16px;
+            height: 16px;
+            path {
+              fill: $gray-600;
+            }
+          }
+
+          .bigKunai {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+
+        .info {
+          color: $blue-100;
+        }
+
+        .date {
+          margin-top: 10px;
+          font-size: 18px;
+          font-weight: 400;
+          color: $gray-400;
+        }
+      }
+    }
+  }
+
+  .moreNewsBtn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    p {
+      font-size: 16px;
+      font-weight: 600;
+      color: $orange-100;
+    }
+  }
+}
