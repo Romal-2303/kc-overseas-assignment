@@ -167,9 +167,8 @@
       }
 
       .chevronDownIconContainer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include center-flex;
+
         background-color: white;
         border-radius: 50%;
         height: 48px;

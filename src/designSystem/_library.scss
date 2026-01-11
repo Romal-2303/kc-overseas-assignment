@@ -1,4 +1,5 @@
-@forward "./colors/colors";
-@use "typography";
-@use "box-shadow";
-@use "font";
+@forward "./colors/colors"; // re-export colors
+@forward "./mixins"; // re-export mixins
+@use "typography"; // consume typography
+@use "box-shadow"; // consume box-shadow
+@use "font"; // consume font

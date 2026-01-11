@@ -9,6 +9,7 @@ import useIsMobile from "../../../hooks/useIsMobile";
 const Promotion = () => {
   const isMobile = useIsMobile(576);
   const [dropdownActive, setDropdownActive] = useState(false);
+  const [selectedBranch, setSelectedBranch] = useState("Pune Branch");
 
   return (
     <section className={classes.promotionContainer}>
@@ -31,14 +32,14 @@ const Promotion = () => {
       <div className={classes.breadCrumbContainer}>
         <p className={`${classes["breadcrumb-inactive"]} heading-5`}>Home</p>
         <div className={classes.breadCrumbSeparator}></div>
-        <p className={`heading-5`}>Pune Branch</p>
+        <p className={`heading-5`}>{selectedBranch}</p>
       </div>
 
       <div className={classes.mainHeading}>
         <p className="heading-1">
           <p>KC Overseas Education</p>
           <p className={classes.locationText}>
-            Pune
+            {selectedBranch.split(" ")[0]}
             {!isMobile && <p className={classes.bottomDecorator}></p>}
           </p>
         </p>
@@ -63,6 +64,7 @@ const Promotion = () => {
           <p>Branch Address</p>
           {dropdownActive && (
             <Dropdown
+              setvalue={setSelectedBranch}
               dropdownItems={[
                 "Pune Branch",
                 "Mumbai Branch",

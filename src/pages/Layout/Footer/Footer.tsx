@@ -23,7 +23,7 @@ const Footer = () => {
       </div>
 
       <p className={`${classes.footerTitle} heading-1`}>
-        Stay updated with KC Overseas Careers
+        Stay updated with KC Overseas
       </p>
 
       <div className={classes.footerFormContainer}>

@@ -65,34 +65,6 @@ const Events = () => {
             </div>
           </div>
 
-          {/* <div className={classes.remainingEventsContainer}>
-            {eventList.map((el) => (
-              <div className={classes.eventCard}>
-                <div className={classes.imageContainer}>
-                  <img
-                    src={el.image}
-                    className={classes.eventImage}
-                    alt="sky-scrapers"
-                  />
-                </div>
-                <div className={classes.eventContentContainer}>
-                  <div className={classes.dateContainer}>{el.date}</div>
-                  <div className={`heading-4 ${classes.titleContainer}`}>
-                    {el.title}
-                  </div>
-                  <div className={classes.descriptionContainer}>
-                    {el.description}
-                  </div>
-
-                  <button className={classes.registerNowBtn}>
-                    <p>Register Now</p>
-                    <ChevronRight />
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div> */}
-
           {eventList.map((el, index) => (
             <div key={index} className={classes.highlightedEventContainer}>
               <div className={classes.eventCard}>

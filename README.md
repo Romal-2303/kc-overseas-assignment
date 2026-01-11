@@ -1,73 +1,135 @@
-# React + TypeScript + Vite
+# KC Overseas - Website Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive website for KC Overseas built with React, TypeScript, and Vite. This project demonstrates a clean architecture, component-based design, and a comprehensive design system.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design**: Fully responsive layout
+- **Modern Tech Stack**: Built with React 19, TypeScript, and Vite
+- **Component Architecture**: Modular, reusable components with SCSS modules
+- **Design System**: Comprehensive design system with typography, colors, and mixins
+- **Custom Icons**: SVG-based icon components
+- **Type Safety**: Full TypeScript implementation for better code quality
 
-## React Compiler
+## 📋 Project Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── assets/
+│   ├── fonts/          # Custom AOK Buenos Aires font family
+│   ├── Icons/          # SVG icon components
+│   └── Images/         # Image assets
+├── components/         # Reusable components (Carousel, Dropdown)
+├── designSystem/      # Design tokens, typography, colors, mixins
+├── hooks/             # Custom React hooks (useIsMobile)
+├── pages/
+│   ├── Homepage/      # Homepage sections
+│   │   ├── Events/
+│   │   ├── HighlightSteps/
+│   │   ├── LatestUpdates/
+│   │   ├── Promotion/
+│   │   ├── Services/
+│   │   └── Testimonials/
+│   └── Layout/        # Layout components (Header, Footer)
+└── App.tsx            # Main application component
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **React 19.2.0** - UI library
+- **TypeScript 5.9.3** - Type safety
+- **Vite 7.2.4** - Build tool and dev server
+- **SCSS** - Styling with CSS modules
+- **ESLint** - Code linting
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📦 Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd kc-overseas
 ```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+## 🏃 Running the Application
+
+### Development Server
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:5173` (or the port specified by Vite).
+
+### Build for Production
+
+Build the application for production:
+
+```bash
+npm run build
+```
+
+The optimized build will be in the `dist` directory.
+
+### Preview Production Build
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+### Linting
+
+Run ESLint to check for code quality issues:
+
+```bash
+npm run lint
+```
+
+## 🎨 Design System
+
+The project includes a comprehensive design system located in `src/designSystem/`:
+
+- **Typography**: Custom font system with AOK Buenos Aires font family
+- **Colors**: Primary and secondary color palettes
+- **Mixins**: Reusable SCSS mixins for common patterns
+- **Box Shadows**: Consistent shadow utilities
+- **Classes**: Shared utility classes
+
+## 📱 Responsive Breakpoints
+
+The application uses a custom `useIsMobile` hook for responsive behavior:
+
+- Mobile breakpoint: 576px
+
+## 📝 Code Quality
+
+- TypeScript for type safety
+- ESLint for code linting
+- SCSS modules for scoped styling
+- Component-based architecture
+- Custom hooks for reusable logic
+
+## 🎯 Assignment Highlights
+
+This project demonstrates:
+
+- Modern React development practices
+- TypeScript implementation
+- Responsive design principles
+- Component reusability
+- Design system implementation
+- Clean code architecture
+
+## 📄 License
+
+This project is part of an interview assignment.
