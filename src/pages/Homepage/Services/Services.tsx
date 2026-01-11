@@ -5,7 +5,6 @@ import Location from "../../../assets/Icons/Location";
 import classes from "./Services.module.scss";
 import GirlTalking from "../../../assets/Images/girls_talking.png";
 import StarFilled from "../../../assets/Icons/StarFilled";
-import useIsMobile from "../../../hooks/useIsMobile";
 
 let servicesList = [
   { icon: <IndexFinger />, content: "Test Preparing & Coaching" },

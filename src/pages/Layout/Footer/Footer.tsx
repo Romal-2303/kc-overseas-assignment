@@ -12,7 +12,7 @@ const Footer = () => {
   const isMobile = useIsMobile(576);
   const isTablet = useIsMobile(850);
   const [dropdownActive, setDropdownActive] = useState(false);
-  const [selectedService, setSelectedService] = useState<string>("");
+  const [_, setSelectedService] = useState<string>("");
 
   return (
     <div className={classes.footerContainer}>
