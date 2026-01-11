@@ -21,8 +21,6 @@ let featuresList = [
 ];
 
 const Services = () => {
-  const isMobile = useIsMobile(950);
-
   return (
     <div className={classes.servicesContainer}>
       <div className={`${classes.headingText} heading-1`}>
