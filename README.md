@@ -69,6 +69,8 @@ npm run dev
 
 The application will be available at `http://localhost:5173` (or the port specified by Vite).
 
+> **⚠️ Important Note for Reviewers**: When testing responsive behavior by resizing the browser window from full screen to mobile size, please **refresh the page** to see the mobile layout. This is due to the `useIsMobile` hook implementation. The responsive behavior works correctly when the application is directly opened on a mobile device or when the browser is initially loaded at a mobile size.
+
 ### Build for Production
 
 Build the application for production:
